@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import uuid from "react-native-uuid";
 import update from "immutability-helper";
-import { Button } from "antd";
+import { Button, Alert } from "antd";
 import "antd/dist/antd.css";
 import "../../test.css";
 import { sampleSeasons, dateFormat } from "../sampleSeasons";
@@ -53,6 +53,7 @@ export default class TypeOne extends Component {
 
     return (
       <div>
+        <Alert message="Radio buttons with season selector and range picker." type="success" />
         <h2>Search Start Date</h2>
         <span>{searchRange.start.format("dddd, MMMM Do YYYY")}</span>
         <hr />

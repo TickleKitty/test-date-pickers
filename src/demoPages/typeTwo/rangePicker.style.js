@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const PickerModalWrapper = styled.div`
+const RangePickerWrapper = styled.div`
   .moveButtons button {
     margin-bottom: 20px;
   }
@@ -16,4 +16,4 @@ const PickerModalWrapper = styled.div`
 
 `;
 
-export { PickerModalWrapper };
+export { RangePickerWrapper };

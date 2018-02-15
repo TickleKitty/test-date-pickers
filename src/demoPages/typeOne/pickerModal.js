@@ -35,7 +35,7 @@ export default class PickerModal extends Component {
     );
 
     this.handleSeasonSelectChange = this.handleSeasonSelectChange.bind(this);
-    this.handleRangerPickerChange = this.handleRangerPickerChange.bind(this);
+    this.handleRangePickerChange = this.handleRangePickerChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -55,7 +55,7 @@ export default class PickerModal extends Component {
     }
   };
 
-  handleRangerPickerChange = values => {
+  handleRangePickerChange = values => {
     this.updateSearchRange(values[0], values[1]);
   };
 
@@ -74,8 +74,6 @@ export default class PickerModal extends Component {
   handleSubmit = () => {
     const { searchRange } = this.state;
     const { updateFromPicker } = this.props;
-
-    console.dir(searchRange);
 
     updateFromPicker(searchRange);
   };
@@ -117,10 +115,11 @@ export default class PickerModal extends Component {
 
       return (
         <Modal
+          closable={false}
+          maskClosable={false}
           width={600}
           visible={true}
-          title="Giggity..."
-          //  onCancel={this.checkStatusBeforeCancel}
+          title="Select From Season or Custom"
           footer={footer}
         >
           <PickerModalWrapper>
@@ -171,7 +170,7 @@ export default class PickerModal extends Component {
                 <RangePicker
                   disabled={datePickerSelectedType !== datePickerTypes.CUSTOM}
                   defaultValue={[searchRange.start, searchRange.end]}
-                  onChange={this.handleRangerPickerChange}
+                  onChange={this.handleRangePickerChange}
                 />
               </FormItem>
             </Segment>
@@ -179,7 +178,7 @@ export default class PickerModal extends Component {
         </Modal>
       );
     } else {
-      return <span>fooo</span>;
+      return <span>error</span>;
     }
   }
 }

@@ -5,7 +5,8 @@ import { Menu, Icon, Layout, BackTop } from "antd";
 import "antd/dist/antd.css";
 import "./test.css";
 import {
-  TypeOne
+  TypeOne,
+  TypeTwo
 } from "./demoPages";
 const { Header, Footer, Content } = Layout;
 const TabPane = Tabs.TabPane;
@@ -27,9 +28,12 @@ export default class GridExampleStretched extends Component {
               <Grid.Row stretched>
                 <Grid.Column width={16}>
                   <Segment>
-                    <Tabs defaultActiveKey="1" tabPosition="left">
+                    <Tabs defaultActiveKey="2" tabPosition="left">
                       <TabPane tab="Type 1" key="1">
                         <TypeOne />
+                      </TabPane>
+                      <TabPane tab="Type 2" key="2">
+                        <TypeTwo />
                       </TabPane>
  
                      {/*} <TabPane tab="Users" key="5">

@@ -116,67 +116,13 @@ export default class PickerModal extends Component {
       );
 
       return (
-        <Modal
-          width={600}
-          visible={true}
-          title="Giggity..."
-          //  onCancel={this.checkStatusBeforeCancel}
-          footer={footer}
-        >
-          <PickerModalWrapper>
-            <Segment>
-              <FormItem>
-                <Radio
-                  onChange={this.handleDatePickerTypeChange}
-                  checked={datePickerSelectedType === datePickerTypes.SEASON}
-                  name="datePickerType"
-                  id="datePickerType"
-                  value={datePickerTypes.SEASON}
-                >
-                  Select from a season
-                </Radio>
-                <br />
 
-                <Select
-                  disabled={datePickerSelectedType !== datePickerTypes.SEASON}
-                  showSearch
-                  style={{ width: 330 }}
-                  placeholder="Select a season"
-                  optionFilterProp="children"
-                  onChange={this.handleSeasonSelectChange}
-                  filterOption={(input, option) =>
-                    option.props.children
-                      .toLowerCase()
-                      .indexOf(input.toLowerCase()) >= 0
-                  }
-                >
-                  {seasons &&
-                    seasons.map((season, index) => (
-                      <Option key={season.guid}>{season.seasonName}</Option>
-                    ))}
-                </Select>
-              </FormItem>
+        <RangePicker
+          open={true}
+          defaultValue={[searchRange.start, searchRange.end]}
+          onChange={this.handleRangerPickerChange}
+        />
 
-              <FormItem>
-                <Radio
-                  onChange={this.handleDatePickerTypeChange}
-                  checked={datePickerSelectedType === datePickerTypes.CUSTOM}
-                  name="datePickerType"
-                  id="datePickerType"
-                  value={datePickerTypes.CUSTOM}
-                >
-                  Set a custom date range
-                </Radio>
-                <br />
-                <RangePicker
-                  disabled={datePickerSelectedType !== datePickerTypes.CUSTOM}
-                  defaultValue={[searchRange.start, searchRange.end]}
-                  onChange={this.handleRangerPickerChange}
-                />
-              </FormItem>
-            </Segment>
-          </PickerModalWrapper>
-        </Modal>
       );
     } else {
       return <span>fooo</span>;
