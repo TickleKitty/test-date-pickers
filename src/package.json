@@ -1,0 +1,28 @@
+{
+  "name": "l5j5zry729",
+  "version": "1.0.0",
+  "description": null,
+  "keywords": [],
+  "homepage": "https://codesandbox.io/s/l5j5zry729",
+  "main": "index.js",
+  "dependencies": {
+    "antd": "3.1.4",
+    "chart.js": "2.7.1",
+    "chartjs-plugin-datalabels": "0.2.0",
+    "immutability-helper": "2.6.4",
+    "moment": "2.20.1",
+    "react": "16.0.0",
+    "react-chartjs-2": "2.7.0",
+    "react-chartkick": "0.1.6",
+    "react-dom": "16.0.0",
+    "react-format-currency": "0.0.9",
+    "react-intl": "2.4.0",
+    "react-native-uuid": "1.4.9",
+    "react-number-format": "3.1.4",
+    "react-scroll-box": "0.3.5",
+    "semantic-ui-css": "2.2.12",
+    "semantic-ui-react": "0.77.2",
+    "styled-components": "3.1.4",
+    "styled-theme": "0.3.3"
+  }
+}

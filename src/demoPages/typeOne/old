@@ -1,0 +1,33 @@
+import React from "react";
+import { PropertySelectorBoxWrapper } from "./propertySelectorBox.style";
+import { sampleProperties, getPropertyByMarket } from "./lookups";
+import { Checkbox, List } from "antd";
+const CheckboxGroup = Checkbox.Group;
+
+export const PropertySelectorBox = props => {
+  const { header, properties, market, onChangeAction, checkedProperties } = props;
+
+  return (
+    <PropertySelectorBoxWrapper>
+
+      <h3>{header}</h3>
+      <List         
+        size="small"
+        itemLayout="horizontal"
+        dataSource={properties}
+        renderItem={property => (
+          <List.Item>
+            <div className="selectListItem">
+                <Checkbox 
+                checked={checkedProperties.includes(property)}
+                onChange={(e) => onChangeAction(property, e)}> 
+                  {getPropertyByMarket(market.marketGuid, property).propertyName}
+                </Checkbox>
+              
+            </div>
+          </List.Item>
+        )}
+      />
+    </PropertySelectorBoxWrapper>
+  );
+};

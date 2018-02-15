@@ -1,0 +1,80 @@
+.mainAppHolderStyle {
+  text-align: "left";
+  margin: 10;
+}
+
+.filterLabel {
+  margin-bottom: "15px";
+  display: block;
+}
+
+.tableCellFlareRising {
+  color: green;
+  text-align: right;
+}
+
+.tableCellFlareFalling {
+  color: red;
+  text-align: right;
+}
+
+.leftAlign {
+  text-align: left;
+}
+
+.components-table-demo-nested .ant-table-expanded-row > td:last-child {
+  padding: 0 48px 0 8px;
+}
+
+html * {
+  font-family: Arial, sans-serif !important;
+}
+
+.filterBoxBackgroundColor {
+  background-color: #fafafa !important;
+}
+
+.layoutBox {
+  background-color: #eeeeee !important;
+}
+
+canvas {
+  background-color: #fafafa !important;
+}
+
+.headerStyle {
+  background-color: #fff;
+  padding-top: 8px;
+}
+
+.subTableOddRow {
+  text-align: left;
+  background-color: #eeeeee;
+}
+
+.subTableEvenRow {
+  text-align: left;
+}
+
+.subTableWrapper thead th {
+  font-weight: bolder !important;
+}
+
+.ownerCellFlareOwnerWrapper {
+  float: right;
+  width: 90px;
+  margin-right: 450px;
+}
+
+.ownerCellFlare {
+  background-color: #f3c209;
+}
+
+.toggleCheckBox {
+  text-align: center;
+}
+
+.ant-radio-button-wrapper {
+  border: 0px !important;
+  margin: 10px !important;
+}
