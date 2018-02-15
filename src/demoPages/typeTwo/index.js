@@ -23,7 +23,7 @@ export default class TypeTwo extends Component {
 
     this.state = {
       searchRange: {
-        start: moment("2018/11/15", dateFormat),
+        start: moment("2018/12/15", dateFormat),
         end: moment("2019/01/10", dateFormat)
       },
       testPickerActive: false
