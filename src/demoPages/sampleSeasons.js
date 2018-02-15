@@ -16,7 +16,7 @@ const sampleSeasons = [
   },
   {
     guid: "ze067955df4d-29f66e9-b0fe-12db-3a78",
-    seasonName: "Christmas / New Years 2018",
+    seasonName: "Christmas / New Years 2018!!",
     start: moment('2018/12/15', dateFormat),
     end: moment('2019/01/10', dateFormat)
   }
